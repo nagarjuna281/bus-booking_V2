@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - BusBooker V2</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <h1 class="logo">🚌 BusBooker V2</h1>
+                <ul class="nav-menu">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/booking" class="nav-link">Book Bus</a></li>
+                    <li><a href="/admin" class="nav-link">Admin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="confirmation-section">
+            <div class="container">
+                <div class="confirmation-card">
+                    <div class="confirmation-header">
+                        <h2>🎉 Booking Confirmed!</h2>
+                        <p>Your bus ticket has been successfully booked</p>
+                    </div>
+                    
+                    <div class="confirmation-details">
+                        <div class="detail-group">
+                            <h3>Booking Information</h3>
+                            <p><strong>PNR Number:</strong> <span id="confirmationPnr">Loading...</span></p>
+                            <p><strong>Passenger Name:</strong> <span id="confirmationName">Loading...</span></p>
+                            <p><strong>Email:</strong> <span id="confirmationEmail">Loading...</span></p>
+                            <p><strong>Booking Date:</strong> <span id="confirmationDate">Loading...</span></p>
+                        </div>
+                        
+                        <div class="detail-group">
+                            <h3>Journey Details</h3>
+                            <p><strong>Route:</strong> <span id="confirmationRoute">Loading...</span></p>
+                            <p><strong>Departure:</strong> <span id="confirmationDeparture">Loading...</span></p>
+                            <p><strong>Arrival:</strong> <span id="confirmationArrival">Loading...</span></p>
+                            <p><strong>Bus Type:</strong> <span id="confirmationBusType">Loading...</span></p>
+                        </div>
+                        
+                        <div class="detail-group">
+                            <h3>Payment Details</h3>
+                            <p><strong>Seats Booked:</strong> <span id="confirmationSeats">Loading...</span></p>
+                            <p><strong>Total Amount:</strong> $<span id="confirmationAmount">Loading...</span></p>
+                            <p><strong>Payment Method:</strong> <span id="confirmationPayment">Loading...</span></p>
+                            <p><strong>Status:</strong> <span class="status-confirmed">CONFIRMED</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="confirmation-actions">
+                        <button onclick="window.print()" class="cta-button">Print Ticket</button>
+                        <a href="/booking" class="cta-button secondary">Book Another Ticket</a>
+                        <a href="/" class="cta-button secondary">Back to Home</a>
+                    </div>
+                    
+                    <div class="confirmation-note">
+                        <p>📧 A confirmation email has been sent to your email address.</p>
+                        <p>📱 Please show this PNR at the boarding point.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BusBooker V2. All rights reserved. | Version 2.0.0</p>
+        </div>
+    </footer>
+
+    <script>
+        // This would typically be populated from the backend or URL parameters
+        // For demo purposes, we'll use mock data
+        document.addEventListener('DOMContentLoaded', function() {
+            // In a real application, you would fetch this data from an API
+            // based on booking ID or PNR from URL parameters
+            const mockData = {
+                pnr: 'PNR' + Date.now().toString().slice(-6),
+                passengerName: 'John Doe',
+                email: 'john@example.com',
+                bookingDate: new Date().toLocaleDateString(),
+                route: 'New York → Boston',
+                departure: '08:00 AM, ' + new Date(Date.now() + 86400000).toLocaleDateString(),
+                arrival: '12:00 PM, ' + new Date(Date.now() + 86400000).toLocaleDateString(),
+                busType: 'AC Sleeper',
+                seats: 2,
+                totalAmount: 90,
+                paymentMethod: 'Credit Card'
+            };
+
+            document.getElementById('confirmationPnr').textContent = mockData.pnr;
+            document.getElementById('confirmationName').textContent = mockData.passengerName;
+            document.getElementById('confirmationEmail').textContent = mockData.email;
+            document.getElementById('confirmationDate').textContent = mockData.bookingDate;
+            document.getElementById('confirmationRoute').textContent = mockData.route;
+            document.getElementById('confirmationDeparture').textContent = mockData.departure;
+            document.getElementById('confirmationArrival').textContent = mockData.arrival;
+            document.getElementById('confirmationBusType').textContent = mockData.busType;
+            document.getElementById('confirmationSeats').textContent = mockData.seats;
+            document.getElementById('confirmationAmount').textContent = mockData.totalAmount;
+            document.getElementById('confirmationPayment').textContent = mockData.paymentMethod;
+        });
+    </script>
+</body>
+</html>
