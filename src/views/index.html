@@ -3,28 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BusBooker V2</title>
+    <title>BusBooker V2 - Home</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="logo">🚌 BusBooker</h1>
+            <h1 class="logo">🚌 BusBooker V2</h1>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/booking" class="nav-link">Book Bus</a></li>
+                <li><a href="/admin" class="nav-link">Admin</a></li>
+            </ul>
         </div>
     </nav>
 
-    <main>
-        <section class="hero">
-            <h2>Welcome to BusBooker V2</h2>
-            <p>Simple and reliable bus booking</p>
-            <a href="/booking" class="cta-button">Book Your Bus</a>
-        </section>
-        
-        <div style="max-width: 800px; margin: 0 auto; padding: 2rem;">
-            <h3>Available Buses</h3>
-            <div id="busesContainer"></div>
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to BusBooker Version 2</h2>
+            <p>Enhanced features, better experience</p>
+            <a href="/booking" class="cta-button">Book Your Journey</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2>Available Buses</h2>
+        <div id="busesContainer">
+            Loading buses...
         </div>
     </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BusBooker V2. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="/js/app.js"></script>
 </body>
