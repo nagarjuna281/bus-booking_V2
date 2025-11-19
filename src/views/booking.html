@@ -3,101 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Your Bus - BusBooker V2</title>
+    <title>Book Bus - BusBooker</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <h1 class="logo">🚌 BusBooker V2</h1>
-                <ul class="nav-menu">
-                    <li><a href="/" class="nav-link">Home</a></li>
-                    <li><a href="/booking" class="nav-link active">Book Bus</a></li>
-                    <li><a href="/admin" class="nav-link">Admin</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section class="booking-section">
-            <div class="container">
-                <h2>Find and Book Your Bus</h2>
-                
-                <div class="search-form enhanced-form">
-                    <input type="text" id="fromInput" placeholder="From (e.g., New York)" />
-                    <input type="text" id="toInput" placeholder="To (e.g., Boston)" />
-                    <select id="typeFilter">
-                        <option value="">All Bus Types</option>
-                        <option value="AC Sleeper">AC Sleeper</option>
-                        <option value="Luxury Coach">Luxury Coach</option>
-                        <option value="Standard">Standard</option>
-                    </select>
-                    <input type="number" id="minPrice" placeholder="Min Price" min="0" />
-                    <input type="number" id="maxPrice" placeholder="Max Price" min="0" />
-                    <select id="sortBy">
-                        <option value="">Sort By</option>
-                        <option value="price">Price (Low to High)</option>
-                        <option value="departure">Departure Time</option>
-                        <option value="duration">Duration</option>
-                    </select>
-                    <button id="searchBtn" class="search-button">Search Buses</button>
-                </div>
-
-                <div id="busesList" class="buses-list">
-                    <!-- Buses will be displayed here -->
-                </div>
-
-                <div id="bookingForm" class="booking-form enhanced-form hidden">
-                    <h3>Complete Your Booking</h3>
-                    <form id="bookForm">
-                        <input type="hidden" id="selectedBusId" />
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="passengerName">Passenger Name:</label>
-                                <input type="text" id="passengerName" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" required />
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="seats">Number of Seats:</label>
-                                <input type="number" id="seats" min="1" max="10" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="paymentMethod">Payment Method:</label>
-                                <select id="paymentMethod" required>
-                                    <option value="credit_card">Credit Card</option>
-                                    <option value="debit_card">Debit Card</option>
-                                    <option value="paypal">PayPal</option>
-                                    <option value="upi">UPI</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Selected Seats (Optional):</label>
-                            <input type="text" id="selectedSeats" placeholder="e.g., A1, A2, B3" />
-                        </div>
-                        <button type="submit" class="book-button">Confirm Booking</button>
-                    </form>
-                </div>
-
-                <div id="bookingResult" class="booking-result hidden">
-                    <!-- Booking result will be shown here -->
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 BusBooker V2. All rights reserved. | Version 2.0.0</p>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🚌 Book Bus</h1>
+            <a href="/" style="color: white;">← Back to Home</a>
         </div>
-    </footer>
+    </nav>
+
+    <main style="max-width: 800px; margin: 2rem auto; padding: 0 2rem;">
+        <h2>Book Your Journey</h2>
+        <div style="background: white; padding: 2rem; border-radius: 8px;">
+            <p>Booking system coming soon...</p>
+            <a href="/" class="cta-button">Return Home</a>
+        </div>
+    </main>
 
     <script src="/js/app.js"></script>
 </body>
