@@ -2,20 +2,14 @@
 FROM node:18-alpine AS builder
 
 WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
 COPY .eslintrc.json ./
-
-# Install dependencies (including dev for potential testing)
 RUN npm ci
 
-# Copy source code
+# Copy ALL source files
 COPY src/ ./src/
 COPY tests/ ./tests/
-
-# Skip tests in Docker build (run them in CI instead)
-# RUN npm test
+RUN npm test
 
 # Production stage
 FROM node:18-alpine AS production
@@ -23,7 +17,12 @@ FROM node:18-alpine AS production
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci --only=production
-COPY --from=builder /app/src ./src
+
+# FIX: Copy public files from builder stage
+COPY --from=builder /app/src/ ./src/
+
+# Verify files
+RUN ls -la /app/src/public/css/ && ls -la /app/src/public/js/
 
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S nextjs -u 1001 && \
@@ -31,8 +30,4 @@ RUN addgroup -g 1001 -S nodejs && \
 
 USER nextjs
 EXPOSE 3000
-
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD node -e "require('http').get('http://localhost:3000/health', (res) => process.exit(res.statusCode === 200 ? 0 : 1))"
-
 CMD ["npm", "start"]
