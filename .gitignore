@@ -1,7 +1,38 @@
+# Dependencies
 node_modules/
-coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Production builds
+dist/
+build/
+
+# Environment variables
 .env
-.DS_Store
+.env.local
+.env.production
+
+# Logs
+logs
 *.log
-.sonar/
+
+# Coverage
+coverage/
 .nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/
+
+# SonarQube
+.sonar/
