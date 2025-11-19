@@ -9,21 +9,21 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <h1 class="logo">🚌 BusBooker V2</h1>
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link active">Home</a></li>
-                <li><a href="/booking" class="nav-link">Book Bus</a></li>
-                <li><a href="/admin" class="nav-link">Admin</a></li>
-            </ul>
+            <h1 class="logo">🚌 BusBooker</h1>
         </div>
     </nav>
 
-    <main class="container">
+    <main>
         <section class="hero">
             <h2>Welcome to BusBooker V2</h2>
-            <p>Book your bus tickets easily</p>
-            <a href="/booking" class="cta-button">Book Now</a>
+            <p>Simple and reliable bus booking</p>
+            <a href="/booking" class="cta-button">Book Your Bus</a>
         </section>
+        
+        <div style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+            <h3>Available Buses</h3>
+            <div id="busesContainer"></div>
+        </div>
     </main>
 
     <script src="/js/app.js"></script>
