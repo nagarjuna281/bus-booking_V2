@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
-    "test": "jest --coverage --coverageReporters=lcov --coverageReporters=text-summary",
+    "test": "jest --coverage --coverageReporters=lcov --coverageReporters=text-summary --verbose",
     "test:watch": "jest --watch",
     "lint": "eslint src/ tests/",
     "lint:fix": "eslint src/ tests/ --fix"
@@ -30,5 +30,12 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/public/**"
+    ]
   }
 }
