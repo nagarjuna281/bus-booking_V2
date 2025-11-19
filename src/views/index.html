@@ -3,85 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BusBooker V2 - Enhanced Bus Booking</title>
+    <title>BusBooker V2</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <h1 class="logo">🚌 BusBooker V2</h1>
-                <ul class="nav-menu">
-                    <li><a href="/" class="nav-link active">Home</a></li>
-                    <li><a href="/booking" class="nav-link">Book Bus</a></li>
-                    <li><a href="/admin" class="nav-link">Admin</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">🚌 BusBooker V2</h1>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link active">Home</a></li>
+                <li><a href="/booking" class="nav-link">Book Bus</a></li>
+                <li><a href="/admin" class="nav-link">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <main>
+    <main class="container">
         <section class="hero">
-            <div class="hero-content">
-                <h2>Welcome to BusBooker V2</h2>
-                <p>Enhanced features for better travel experience</p>
-                <div class="hero-features">
-                    <span>✅ Real-time Availability</span>
-                    <span>✅ Seat Selection</span>
-                    <span>✅ Admin Dashboard</span>
-                    <span>✅ Enhanced Filtering</span>
-                </div>
-                <a href="/booking" class="cta-button">Book Your Journey</a>
-            </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <h3>What's New in V2?</h3>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h4>🎯 Smart Filtering</h4>
-                        <p>Filter by price, bus type, amenities and more</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>💺 Seat Selection</h4>
-                        <p>Choose your preferred seats</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>📊 Admin Dashboard</h4>
-                        <p>Monitor bookings and revenue</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>📧 Email Integration</h4>
-                        <p>Booking confirmations via email</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>💰 Payment Options</h4>
-                        <p>Multiple payment methods</p>
-                    </div>
-                    <div class="feature-card">
-                        <h4>🔍 Booking Management</h4>
-                        <p>View and cancel bookings</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="stats">
-            <div class="container">
-                <h3>Live Statistics</h3>
-                <div class="stats-grid" id="statsContainer">
-                    <!-- Stats will be loaded by JavaScript -->
-                </div>
-            </div>
+            <h2>Welcome to BusBooker V2</h2>
+            <p>Book your bus tickets easily</p>
+            <a href="/booking" class="cta-button">Book Now</a>
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 BusBooker V2. All rights reserved. | Version 2.0.0</p>
-        </div>
-    </footer>
 
     <script src="/js/app.js"></script>
 </body>
